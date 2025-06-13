@@ -19,12 +19,12 @@ model-index:
 
 # Sanskrit → English Translator (Fine-tuned IndicTrans2)
 
-🚀 This is a fine-tuned [IndicTrans2](https://huggingface.co/ai4bharat/indictrans2-en) model that translates classical Sanskrit texts (like Ramayana and Mahabharata) into English.
+ This is a fine-tuned [IndicTrans2](https://huggingface.co/ai4bharat/indictrans2-en) model that translates classical Sanskrit texts (like Ramayana and Mahabharata) into English.
 
-- ✅ Fine-tuned on `rahular/itihasa` (~93k shloka pairs)
-- 🔤 Input: Devanagari Sanskrit
-- 📤 Output: Natural English translations
-- 🧠 Base model: `ai4bharat/indictrans2-en`
+- Fine-tuned on `rahular/itihasa` (~93k shloka pairs)
+- Input: Devanagari Sanskrit
+- Output: Natural English translations
+- Base model: `ai4bharat/indictrans2-en`
 
 ---
 

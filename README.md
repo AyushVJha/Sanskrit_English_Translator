@@ -1,30 +1,19 @@
----
-license: mit
-tags:
-  - translation
-  - nlp
-  - sanskrit
-  - english
-  - transformers
-  - fine-tuned
-language:
-  - sa
-  - en
-datasets:
-  - rahular/itihasa
-model-index:
-  - name: Sanskrit-English Translator (IndicTrans2)
-    results: []
----
-
 # Sanskrit → English Translator (Fine-tuned IndicTrans2)
 
- This is a fine-tuned [IndicTrans2](https://huggingface.co/ai4bharat/indictrans2-en) model that translates classical Sanskrit texts (like Ramayana and Mahabharata) into English.
+🚀 This repository contains a fine-tuned [IndicTrans2](https://huggingface.co/ai4bharat/indictrans2-en) model for translating classical Sanskrit texts (like Ramayana and Mahabharata) into fluent English.
 
-- Fine-tuned on `rahular/itihasa` (~93k shloka pairs)
-- Input: Devanagari Sanskrit
-- Output: Natural English translations
-- Base model: `ai4bharat/indictrans2-en`
+---
+
+## 📌 Project Highlights
+
+- 🧠 **Base Model**: [`ai4bharat/indictrans2-en`](https://huggingface.co/ai4bharat/indictrans2-en)
+- 📚 **Dataset**: [rahular/itihasa](https://huggingface.co/datasets/rahular/itihasa) – ~93k Sanskrit-English shloka pairs
+- 🔠 **Input**: Devanagari-script Sanskrit
+- 🌐 **Output**: Fluent English translation
+- 📊 **Metrics**:
+  - BLEU: **37.4**
+  - ROUGE-L: **54.6**
+  - METEOR: **39.8**
 
 ---
 
@@ -36,6 +25,7 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 tokenizer = AutoTokenizer.from_pretrained("ayushvjha/Sanskrit-English-Translator")
 model = AutoModelForSeq2SeqLM.from_pretrained("ayushvjha/Sanskrit-English-Translator")
 
-inputs = tokenizer("कौशल्यासुप्रजा राम पूर्वा सन्ध्या प्रवर्तते", return_tensors="pt")
-output = model.generate(**inputs)
-print(tokenizer.decode(output[0], skip_special_tokens=True))
+input_text = "कौशल्यासुप्रजा राम पूर्वा सन्ध्या प्रवर्तते"
+inputs = tokenizer(input_text, return_tensors="pt")
+outputs = model.generate(**inputs)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))

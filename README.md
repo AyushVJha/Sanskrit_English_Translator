@@ -1,16 +1,16 @@
 # Sanskrit → English Translator (Fine-tuned IndicTrans2)
 
-🚀 This repository contains a fine-tuned [IndicTrans2](https://huggingface.co/ai4bharat/indictrans2-en) model for translating classical Sanskrit texts (like Ramayana and Mahabharata) into fluent English.
+This repository contains a fine-tuned [IndicTrans2](https://huggingface.co/ai4bharat/indictrans2-en) model for translating classical Sanskrit texts (like Ramayana and Mahabharata) into fluent English.
 
 ---
 
 ## 📌 Project Highlights
 
-- 🧠 **Base Model**: [`ai4bharat/indictrans2-en`](https://huggingface.co/ai4bharat/indictrans2-en)
-- 📚 **Dataset**: [rahular/itihasa](https://huggingface.co/datasets/rahular/itihasa) – ~93k Sanskrit-English shloka pairs
-- 🔠 **Input**: Devanagari-script Sanskrit
-- 🌐 **Output**: Fluent English translation
-- 📊 **Metrics**:
+- **Base Model**: [`ai4bharat/indictrans2-en`](https://huggingface.co/ai4bharat/indictrans2-en)
+- **Dataset**: [rahular/itihasa](https://huggingface.co/datasets/rahular/itihasa) – ~93k Sanskrit-English shloka pairs
+- **Input**: Devanagari-script Sanskrit
+- **Output**: Fluent English translation
+- **Metrics**:
   - BLEU: **37.4**
   - ROUGE-L: **54.6**
   - METEOR: **39.8**
